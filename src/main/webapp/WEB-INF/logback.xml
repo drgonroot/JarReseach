@@ -1,0 +1,21 @@
+<configuration scan="true" scanPeriod="60 seconds">
+    <!--<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>-->
+
+    <appender name="watch" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="watch" level="info" additivity="false">
+        <appender-ref ref="watch"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="watch"/>
+    </root>
+</configuration>
