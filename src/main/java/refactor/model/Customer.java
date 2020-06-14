@@ -36,7 +36,7 @@ public class Customer {
             Rental each = rentals.nextElement();
 
             // determine amounts for each line
-            thisAmount = amountFor(each);
+            thisAmount = each.getCharge();
 
             // add frequent renter points
             frequentRenterPoint++;
@@ -54,13 +54,5 @@ public class Customer {
         result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
         result += "You earned " + String.valueOf(frequentRenterPoint) + " frequent renter points";
         return result;
-    }
-
-
-    /**
-     * 计算某个租借的费用
-     */
-    private double amountFor(Rental rental) {
-        return rental.getCharge();
     }
 }
