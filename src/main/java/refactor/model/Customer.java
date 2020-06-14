@@ -57,30 +57,10 @@ public class Customer {
     }
 
 
+    /**
+     * 计算某个租借的费用
+     */
     private double amountFor(Rental rental) {
-        double result = 0;
-        switch (rental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                result += 2;
-                if (rental.getDayRented() > 2) {
-                    result += (rental.getDayRented()) - 2 * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                result += rental.getDayRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 1.5;
-                if (rental.getDayRented() > 3) {
-                    result += (rental.getDayRented() - 3) * 1.5;
-                }
-                break;
-            default:
-                break;
-        }
-
-        return result;
+        return rental.getCharge();
     }
-
-
 }
