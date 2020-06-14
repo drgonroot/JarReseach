@@ -30,17 +30,9 @@ public class Customer {
         int frequentRenterPoint = 0;
         Enumeration<Rental> rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
-
         while (rentals.hasMoreElements()) {
             Rental each = rentals.nextElement();
-
-            // add frequent renter points
-            frequentRenterPoint++;
-            // add bonus for two day new release rental
-            if ((each.getMovie().getPriceCode() == Movie.CHILDRENS) && each.getDayRented() > 1) {
-                frequentRenterPoint++;
-            }
-
+            frequentRenterPoint += each.getFrequentRenterPoints();
             // show figure for this rental
             result += ("\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n");
             totalAmount += each.getCharge();
