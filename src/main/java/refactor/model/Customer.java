@@ -25,7 +25,6 @@ public class Customer {
         return _name;
     }
 
-    @Deprecated
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoint = 0;
@@ -37,25 +36,7 @@ public class Customer {
             Rental each = rentals.nextElement();
 
             // determine amounts for each line
-            switch (each.getMovie().getPriceCode()) {
-                case Movie.REGULAR:
-                    thisAmount += 2;
-                    if (each.getDayRented() > 2) {
-                        thisAmount += (each.getDayRented()) - 2 * 1.5;
-                    }
-                    break;
-                case Movie.NEW_RELEASE:
-                    thisAmount += each.getDayRented() * 3;
-                    break;
-                case Movie.CHILDRENS:
-                    thisAmount += 1.5;
-                    if (each.getDayRented() > 3) {
-                        thisAmount += (each.getDayRented() - 3) * 1.5;
-                    }
-                    break;
-                default:
-                    break;
-            }
+            thisAmount = amountFor(each);
 
             // add frequent renter points
             frequentRenterPoint++;
@@ -76,8 +57,8 @@ public class Customer {
     }
 
 
-    private int amountFor(Rental each) {
-        int thisAmount = 0;
+    private double amountFor(Rental each) {
+        double thisAmount = 0;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
                 thisAmount += 2;
