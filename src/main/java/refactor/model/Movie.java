@@ -12,11 +12,27 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String _title;
-    private int _priceCode;
+    private Price _price;
 
     public Movie(String _title, int _priceCode) {
         this._title = _title;
-        this._priceCode = _priceCode;
+        setPriceCode(_priceCode);
+    }
+
+    public void setPriceCode(int price) {
+        switch (price) {
+            case REGULAR:
+                _price = new RegularPrice();
+                break;
+            case CHILDRENS:
+                _price = new ChildrenPrice();
+                break;
+            case NEW_RELEASE:
+                _price = new NewReleasePrice();
+                break;
+            default:
+                throw new IllegalArgumentException("Incorrect Price Code");
+        }
     }
 
     public String getTitle() {
@@ -24,46 +40,20 @@ public class Movie {
     }
 
     public int getPriceCode() {
-        return _priceCode;
+        return _price.getPriceCode();
     }
 
     /**
      * 获取租借的费用
      */
     public double getCharge(int dayRented) {
-        double result = 0;
-        switch (getPriceCode()) {
-            case Movie.REGULAR:
-                result += 2;
-                if (dayRented > 2) {
-                    result += (dayRented) - 2 * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                result += dayRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 1.5;
-                if (dayRented > 3) {
-                    result += (dayRented - 3) * 1.5;
-                }
-                break;
-            default:
-                break;
-        }
-
-        return result;
+        return _price.getCharge(dayRented);
     }
 
     /**
      * 常客积分
      */
     public int getFrequentRenterPoints(int dayRented) {
-        // add frequent renter points
-        // add bonus for two day new release rental
-        if ((getPriceCode() == Movie.NEW_RELEASE) && dayRented > 1) {
-            return 2;
-        }
-        return 1;
+        return this._price.getFrequentRenterPoints(dayRented);
     }
 }
