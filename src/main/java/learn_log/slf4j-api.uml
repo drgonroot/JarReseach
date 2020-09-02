@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.slf4j.ILoggerFactory</OriginalElement>
+  <nodes>
+    <node x="135.94078947368416" y="513.0">org.slf4j.LoggerFactory</node>
+    <node x="0.0" y="901.0">org.slf4j.MarkerFactory</node>
+    <node x="186.0" y="889.0">org.slf4j.spi.MarkerFactoryBinder</node>
+    <node x="921.0" y="669.0">org.slf4j.spi.MDCAdapter</node>
+    <node x="69.25" y="226.0">org.slf4j.spi.LocationAwareLogger</node>
+    <node x="753.7500000000001" y="342.0">org.slf4j.helpers.Util</node>
+    <node x="441.0" y="901.0">org.slf4j.helpers.BasicMarkerFactory</node>
+    <node x="10.5" y="342.0">org.slf4j.helpers.NOPLoggerFactory</node>
+    <node x="255.36969696969692" y="775.0">org.slf4j.IMarkerFactory</node>
+    <node x="0.0" y="1336.5">org.slf4j.helpers.MessageFormatter</node>
+    <node x="1053.0" y="796.0">org.slf4j.helpers.BasicMDCAdapter</node>
+    <node x="210.75" y="0.0">org.slf4j.Logger</node>
+    <node x="512.7500000000001" y="330.0">org.slf4j.spi.LoggerFactoryBinder</node>
+    <node x="599.5" y="501.0">org.slf4j.impl.StaticLoggerBinder</node>
+    <node x="727.0" y="807.0">org.slf4j.impl.StaticMDCBinder</node>
+    <node x="4.5" y="1187.5">org.slf4j.helpers.FormattingTuple</node>
+    <node x="235.75000000000003" y="341.0">org.slf4j.helpers.SubstituteLoggerFactory</node>
+    <node x="1259.0" y="807.0">org.slf4j.helpers.NOPMDCAdapter</node>
+    <node x="875.2500000000001" y="457.0">org.slf4j.helpers.NOPLogger</node>
+    <node x="203.54166666666663" y="669.0">org.slf4j.Marker</node>
+    <node x="957.0" y="819.0">org.slf4j.MDC</node>
+    <node x="858.7500000000001" y="342.0">org.slf4j.helpers.MarkerIgnoringBase</node>
+    <node x="78.1613636363636" y="774.0">org.slf4j.helpers.BasicMarker</node>
+    <node x="336.87499999999994" y="1016.0">org.slf4j.impl.StaticMarkerBinder</node>
+    <node x="821.0000000000001" y="225.0">org.slf4j.helpers.NamedLoggerBase</node>
+    <node x="428.4705513784462" y="226.0">org.slf4j.ILoggerFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.slf4j.impl.StaticLoggerBinder" target="org.slf4j.spi.LoggerFactoryBinder">
+      <point x="-73.33333333333331" y="-38.5" />
+      <point x="636.1666666666667" y="437.0" />
+      <point x="622.7500000000001" y="437.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.MarkerIgnoringBase" target="org.slf4j.Logger">
+      <point x="52.75" y="-26.5" />
+      <point x="1017.0000000000001" y="310.0" />
+      <point x="1015.5000000000001" y="310.0" />
+      <point x="1015.5000000000001" y="185.0" />
+      <point x="376.03571428571433" y="185.0" />
+      <point x="76.28571428571433" y="82.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.BasicMarker" target="org.slf4j.Marker">
+      <point x="0.0" y="-27.5" />
+      <point x="152.1613636363636" y="754.0" />
+      <point x="244.79166666666663" y="754.0" />
+      <point x="-13.75" y="27.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.BasicMarkerFactory" target="org.slf4j.IMarkerFactory">
+      <point x="-52.75" y="-26.5" />
+      <point x="493.75" y="849.0" />
+      <point x="415.78636363636366" y="849.0" />
+      <point x="72.91666666666674" y="26.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.NamedLoggerBase" target="org.slf4j.Logger">
+      <point x="0.0" y="-27.5" />
+      <point x="913.0000000000001" y="195.0" />
+      <point x="350.6071428571429" y="195.0" />
+      <point x="50.85714285714289" y="82.5" />
+    </edge>
+    <edge source="org.slf4j.impl.StaticMarkerBinder" target="org.slf4j.spi.MarkerFactoryBinder">
+      <point x="-89.19999999999993" y="-38.5" />
+      <point x="359.175" y="991.0" />
+      <point x="297.5" y="991.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.BasicMDCAdapter" target="org.slf4j.spi.MDCAdapter">
+      <point x="0.0" y="-49.5" />
+      <point x="1146.0" y="776.0" />
+      <point x="1051.2" y="776.0" />
+      <point x="37.200000000000045" y="38.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.SubstituteLoggerFactory" target="org.slf4j.ILoggerFactory">
+      <point x="64.0" y="-27.5" />
+      <point x="427.75" y="310.0" />
+      <point x="480.9705513784462" y="310.0" />
+      <point x="-35.0" y="26.5" />
+    </edge>
+    <edge source="org.slf4j.spi.LocationAwareLogger" target="org.slf4j.Logger">
+      <point x="0.0" y="-26.5" />
+      <point x="179.25" y="205.0" />
+      <point x="274.32142857142856" y="205.0" />
+      <point x="-25.428571428571445" y="82.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.NOPLogger" target="org.slf4j.helpers.MarkerIgnoringBase">
+      <point x="0.0" y="-82.5" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.NOPMDCAdapter" target="org.slf4j.spi.MDCAdapter">
+      <point x="0.0" y="-38.5" />
+      <point x="1352.0" y="766.0" />
+      <point x="1088.3999999999999" y="766.0" />
+      <point x="74.39999999999998" y="38.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.MarkerIgnoringBase" target="org.slf4j.helpers.NamedLoggerBase">
+      <point x="-52.75" y="-26.5" />
+      <point x="911.5000000000001" y="310.0" />
+      <point x="913.0000000000001" y="310.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="org.slf4j.helpers.NOPLoggerFactory" target="org.slf4j.ILoggerFactory">
+      <point x="48.25" y="-26.5" />
+      <point x="155.25" y="300.0" />
+      <point x="445.9705513784462" y="300.0" />
+      <point x="-70.0" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4666666666666667" x="773.0" y="695.0" />
+  <SelectedNodes>
+    <node>org.slf4j.impl.StaticLoggerBinder</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
